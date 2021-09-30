@@ -1,6 +1,7 @@
 const express = require("express");
 const sh = require("shelljs");
-const fs = require('fs')
+const fs = require('fs');
+const geoip = require('geoip-lite');
 const app = express();
 const port = 3128;
 
