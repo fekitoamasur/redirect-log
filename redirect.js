@@ -8,11 +8,8 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   // Get IP
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
 
-  // Get request time 
-  const start = Date.now();
-
   // Log entry 
-  const entry = `At time ${start} got request with ID «${req.query.id}» from IP:«${ip}»\n`;
+  const entry = `At time ${Date.now()} [${new Date().toString()}] got request with ID «${req.query.id}» from IP:«${ip}»\n`;
   
   // Console log
   console.log(entry);
