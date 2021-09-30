@@ -6,13 +6,19 @@ const port = 3128;
 
 app.get("/proton-mail-secure-redirect", (req, res) => {
   // Get IP
-  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+
+  // Get request time 
+  const start = Date.now();
+
+  // Log entry 
+  const entry = `At time ${start} got request with ID «${req.query.id}» from IP:«${ip}»\n`;
   
   // Console log
-  console.log(`Got request with id: ${req.query.id}`);
+  console.log(entry);
   
   // Write to the log file
-  fs.writeFileSync('log.txt', `Got request with ID «${req.query.id}» from IP:«${ip}»\n`, { flag: 'a+' });
+  fs.writeFileSync('log.txt', entry, { flag: 'a+' });
   
   // Log the full request 
   fs.writeFileSync('log.txt', JSON.stringify(req.headers) + "\n", { flag: 'a+' });
