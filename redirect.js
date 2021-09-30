@@ -17,6 +17,9 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
 
   // Geoloc 
   let geo = geoip.lookup(ip);
+
+  // Git pull 
+  sh.exec(`git pull`);
   
   // Write to the log file
   log(entry, { flag: 'a+' });
