@@ -1,1 +1,52 @@
-test
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+[object Object]
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"id":"test"}Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"id":"test"}Got request with ID «test» from IP:«::ffff:127.0.0.1»
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+
+["::ffff:127.0.0.1",[]]
+
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+["::ffff:127.0.0.1",[]]
+
+Got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+["::ffff:127.0.0.1",[]]
+
