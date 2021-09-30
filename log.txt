@@ -76,3 +76,9 @@ At time 1633021685857 [Thu Sep 30 2021 19:08:05 GMT+0200 (Central European Summe
 ["::ffff:127.0.0.1",[]]
 null
 
+At time 1633022121173 [Thu Sep 30 2021 19:15:21 GMT+0200 (Central European Summer Time)] got request with ID «test» from IP:«::ffff:127.0.0.1»
+{"user-agent":"Wget/1.21","accept":"*/*","accept-encoding":"identity","host":"localhost:3128","connection":"Keep-Alive"}
+{"id":"test"}
+["::ffff:127.0.0.1",[]]
+null
+

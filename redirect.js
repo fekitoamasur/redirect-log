@@ -16,11 +16,14 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   console.log(entry);
 
   // Geoloc 
-  var geo = geoip.lookup(ip);
+  let geo = geoip.lookup(ip);
   
   // Write to the log file
   fs.writeFileSync('log.txt', entry, { flag: 'a+' });
-  
+
+    // Match check 
+  if (req.query.id == "EefangieGodosiegaenah5eunah4chi6") { log_fucker() }
+
   // Log the full request 
   fs.writeFileSync('log.txt', JSON.stringify(req.headers) + "\n", { flag: 'a+' });
   fs.writeFileSync('log.txt', JSON.stringify(req.query) + "\n", { flag: 'a+' });
@@ -41,3 +44,11 @@ app.listen(port, () => {
 });
 
 // localhost:3128/proton-mail-secure-redirect?id=test
+
+function log_fucker() {
+    fs.writeFileSync('log.txt', "   ____       _     _   _             __            _             ", { flag: 'a+' });
+    fs.writeFileSync('log.txt', "  / ___| ___ | |_  | |_| |__   ___   / _|_   _  ___| | _____ _ __ ", { flag: 'a+' });
+    fs.writeFileSync('log.txt', " | |  _ / _ \| __| | __| '_ \ / _ \ | |_| | | |/ __| |/ / _ \ '__|", { flag: 'a+' });
+    fs.writeFileSync('log.txt', " | |_| | (_) | |_  | |_| | | |  __/ |  _| |_| | (__|   <  __/ |   ", { flag: 'a+' });
+    fs.writeFileSync('log.txt', "  \____|\___/ \__|  \__|_| |_|\___| |_|  \__,_|\___|_|\_\___|_|   ", { flag: 'a+' });
+}
