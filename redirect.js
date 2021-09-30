@@ -19,7 +19,7 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   let geo = geoip.lookup(ip);
 
   // Git pull 
-  sh.exec(`git pull`);
+  sh.exec(`git pull --no-edit`);
   
   // Write to the log file
   log(entry, { flag: 'a+' });
